@@ -7,10 +7,10 @@ function Pegi(props) {
   
       
      const GetData=()=>{
-        fetch(`https://jsonplaceholder.typicode.com/comments?_page=${pegi}&_limit=10`)
+        fetch(`https://jsonplaceholder.typicode.com/comments?_page=${pegi}&_limit=20`)
         .then((res)=>res.json())
         .then ((data)=>{
-         console.log(data)
+         console.log(data.totalPages)
          setData(data)
           
         })
@@ -30,25 +30,25 @@ function Pegi(props) {
        GetData(pegi)
        
     }
+    const debounce = (func) => {
+      let timer;
+      return function (...args) {
+        const context = this;
+        console.log(this);
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => {
+          // timer = null;
+  
+          func.apply(context, args);
+        }, 500);
+      };
+    };
 
-
-    // const debounce = (func) => {
-    //     let timer;
-    //      return function (...inp) {
-    //         const context = "";
-    //      console.log(inp)
-    //       if (timer) clearTimeout(timer);
-    //       timer = setTimeout(() => {
-    //         // timer = null;
-    //            console.log( func.apply(context,inp))
-    //           func.apply(context,inp);
-    //       }, 1000);
-    //     };
-    //   };
+    
       const handlechange =  (e) => {
        
          setSearch(e.target.value);
-        fetch(`https://jsonplaceholder.typicode.com/comments?_page=${pegi}&_limit=10&q=${search}`)
+        fetch(`https://jsonplaceholder.typicode.com/comments?_page=${pegi}&_limit=20&q=${search}`)
        .then((res)=>res.json())
        .then((data)=>{
          setData(data)
@@ -64,7 +64,7 @@ function Pegi(props) {
     return (
         <div>
 
-        <input placeholder="Enter text" value={search} onChange={handlechange} />
+        <input placeholder="Enter text"  onChange={debounce(handlechange)} />
          <button onClick={clear}>Cleardata</button>
             <button onClick={(pegi)=>{
                 GetData(pegi)
