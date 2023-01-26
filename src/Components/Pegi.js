@@ -92,7 +92,7 @@ function Pegi(props) {
                
              
             
-        ></button>
+        >Next</button>
             </div>
         </div>
     );
