@@ -73,9 +73,9 @@ function Pegi(props) {
             
 
             }> GETDATA</button>
-              { data.map((e)=>{
+              { data.map((e,i)=>{
               return(
-                <div>
+                <div  key={i}>
                  <h1>{e.email}</h1>
                 
                 
@@ -92,7 +92,7 @@ function Pegi(props) {
                
              
             
-        >Next</button>
+        ></button>
             </div>
         </div>
     );
