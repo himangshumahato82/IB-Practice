@@ -5,6 +5,7 @@ import Home from '../Home';
 import Pegi from '../Pegi';
 import Login from '../Login';
 import Users from '../Users';
+import Timer from '../Timer';
 function AllRoute(props) {
     return (
         <div>
@@ -14,6 +15,7 @@ function AllRoute(props) {
             <Route path="/data" element={<PrivateRouting Chil={Pegi}/>}/>
             <Route path="/users" element={<PrivateRouting Chil={Users}/>}/>
             <Route path ="/" element={<Login/>}/>
+            <Route path ="/timer" element={<Timer/>}/>
             </Routes>
         </div>
     );

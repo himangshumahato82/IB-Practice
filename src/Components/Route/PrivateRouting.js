@@ -7,7 +7,7 @@ function PrivateRouting(props) {
     const navigate=useNavigate()
     const {Chil}=props
     // console.log(Chil)
-    // console.log(props)
+    console.log(props)
  const {state}=useContext(Mycontext)
 //  console.log(state)
    useEffect(() => {
