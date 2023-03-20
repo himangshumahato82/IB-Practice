@@ -25,15 +25,15 @@ function Users(props) {
    },2000)
    return ()=>clearTimeout(handlechange)
 },[search])
-   //  const Pre=()=>{
-   //    setPegi((pre)=>pre-1)
-   //    // GetData()
-   //  }
-   // const Next=()=>{
-   //  setPegi((pre)=>pre+1)
-   // //  GetData()
-   // }
-   // closure
+    const Pre=()=>{
+      setPegi((pre)=>pre-1)
+      // GetData()
+    }
+   const Next=()=>{
+    setPegi((pre)=>pre+1)
+   //  GetData()
+   }
+   closure
    const add = (function () {
       let counter = 0;
       
