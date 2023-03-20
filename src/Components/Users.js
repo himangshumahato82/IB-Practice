@@ -22,9 +22,12 @@ function Users(props) {
       .then((data)=>{
         setState(data)
       })
+
    },2000)
    return ()=>clearTimeout(handlechange)
 },[search])
+  
+
    //  const Pre=()=>{
    //    setPegi((pre)=>pre-1)
    //    // GetData()
@@ -58,22 +61,32 @@ function Users(props) {
     var promise = new Promise(function(resolve, reject) {
       const x = "geeksforgeeks";
       const y = "geeksforgeeks"
-      if(x === y) {
-        resolve();
-      } else {
+     
+      if(x===y) {
+         resolve();
+       
+      }else{
         reject();
       }
-      });
+
+       });
         
-      promise.
-        then(function () {
-          console.log('Success, You are a GEEK');
+      promise.then(function () {
+        
+          console.log(promise); 
         }).
         catch(function () {
           console.log('Some error has occurred');
         });
       
+//  const url='https://jsonplaceholder.typicode.com'
 
+//         async function beautifulFunctionName(url) {
+//           let response = await fetch(url);
+//           console.log(response);
+//           return response;
+//           }
+//           console.log(beautifulFunctionName(url))
 
 
 
