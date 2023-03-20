@@ -4,15 +4,16 @@ import React from 'react';
 function Users(props) {
    const [search, setSearch] = useState(""); 
   const [state,setState]=useState([])
-//   const [pegi,setPegi]=useState(1)
-   // const GetData=()=>{
-   //   fetch(`https://jsonplaceholder.typicode.com/comments?_page=${pegi}&_limit=10`)
-   //   .then((res)=>res.json())
-   //   .then((data)=>{
-   //    // console.log(data);
-   //    setState(data)
-   //   })
-   // }
+
+    //const [pegi,setPegi]=useState(1)
+    // const GetData=()=>{
+    //   fetch(`https://jsonplaceholder.typicode.com/comments?_page=${pegi}&_limit=10`)
+    //   .then((res)=>res.json())
+    //   .then((data)=>{
+    //    // console.log(data);
+    //    setState(data)
+    //   })
+    // }
 
    useEffect(()=>{
     const handlechange=setTimeout(()=>{
@@ -33,16 +34,16 @@ function Users(props) {
    // //  GetData()
    // }
    // closure
-   // const add = (function () {
-   //    let counter = 0;
+   const add = (function () {
+      let counter = 0;
       
-   //    return function () {counter += 1; return counter}
+      return function () {counter += 1; return counter}
       
-   //  })();
+    })();
     
-   //  add();
-   //  add();
-   //  add();
+    add();
+    add();
+    add();
    
     const add =(function(){
       let counter =0;
