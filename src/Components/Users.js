@@ -78,6 +78,24 @@ function Users(props) {
         catch(function () {
           console.log('Some error has occurred');
         });
+
+        // callBack Function
+
+        function myDisplayer(some) {
+         const newsum=30+some;
+         console.log(newsum)
+        }
+        
+        function myCalculator(num1, num2) {
+          let sum = num1 + num2;
+          console.log(sum)
+          return sum;
+        }
+        
+       
+        myDisplayer(result=>myCalculator(5, 5))
+ 
+        // here myDisplayer is a callBack functon
       
 //  const url='https://jsonplaceholder.typicode.com'
 
