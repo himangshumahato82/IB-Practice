@@ -48,15 +48,15 @@ function Users(props) {
    //  add();
    //  add();
    
-    // const add =(function(){
-    //   let counter =0;
-    //   return function(){counter+=1;return counter}
-    // })();
+    const add =(function(){
+      let counter =0;
+      return function(){counter+=1;return counter}
+    })();
     
-    // add()
-    // add()
-    // add()
-    // console.log(add())
+    add()
+    add()
+    add()
+    console.log(add())
 
     var promise = new Promise(function(resolve, reject) {
       const x = "geeksforgeeks";
