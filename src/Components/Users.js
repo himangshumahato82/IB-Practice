@@ -98,6 +98,19 @@ function Users(props) {
         
         myDisplayer(myCalculator(5,20))
         // here myDisplayer is a callBack functon
+        // closuer function
+        function outerFunction() {
+          var message = 'Hello';
+        
+          function innerFunction() {
+            console.log(message);
+          }
+        
+          return innerFunction;
+        }
+        
+        const inner = outerFunction();
+        inner(); // logs 'Hello'
       
 //  const url='https://jsonplaceholder.typicode.com'
 
