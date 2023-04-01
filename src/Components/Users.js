@@ -111,6 +111,26 @@ function Users(props) {
         
         const inner = outerFunction();
         inner(); // logs 'Hello'
+
+
+        // currying
+        // A regular function that takes two arguments
+// function add(x, y) {
+//   return x + y;
+// }
+
+// A curried function that takes one argument at a time
+function curriedAdd(x) {
+  return function(y) {
+    return x + y;
+  }
+}
+
+// We can call the curried function like this
+const addTwo = curriedAdd(2); // returns a new function that takes one argument
+console.log(addTwo(3)); // output: 5
+console.log(addTwo(5)); // output: 7
+
       
 //  const url='https://jsonplaceholder.typicode.com'
 
