@@ -119,23 +119,23 @@ function Users(props) {
 //   return x + y;
 // }
 
-const arr = [2, 4, 5, 2, 4, 5, 6, 7, 7];
-const count = {};
+// const arr = [2, 4, 5, 2, 4, 5, 6, 7, 7];
+// const count = {};
 
-for (let i = 0; i < arr.length; i++) {
-  const num = arr[i];
+// for (let i = 0; i < arr.length; i++) {
+//   const num = arr[i];
    
-  if (count[num]) {
-    count[num] += 1;
-    console.log(count[num])
-  } else {
-    count[num] = 1;
-    console.log(count[num])
-  }
-}
-Object.keys(count).forEach(num => {
-  console.log(num + " repeats " + count[num] + " times");
-});
+//   if (count[num]) {
+//     count[num] += 1;
+//     console.log(count[num])
+//   } else {
+//     count[num] = 1;
+//     console.log(count[num])
+//   }
+// }
+// Object.keys(count).forEach(num => {
+//   console.log(num + " repeats " + count[num] + " times");
+// });
 
 // A curried function that takes one argument at a time
 function curriedAdd(x) {
