@@ -58,26 +58,22 @@ function Users(props) {
     add()
     console.log(add())
 
-    var promise = new Promise(function(resolve, reject) {
-      const x = "geeksforgeeks";
-      const y = "geeksforgeeks"
-     
-      if(x>y) {
-         resolve();
-       
-      }else{
-        reject();
-      }
-
-       });
-        console.log("Pending")
-      promise.then(function () {
-        
-          console.log(promise); 
-        }).
-        catch(function () {
-          console.log('Some error has occurred');
-        });
+    const myPromise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const check = false;
+        if (check) {
+          resolve("resolve"); 
+        } else {
+          reject('Rejected'); 
+        }
+      }, 2000);
+    });
+    console.log(myPromise); // Logs "Promise {<pending>}"
+    
+    myPromise
+      .then((result) => console.log(`Promise fulfilled with result: ${result}`))
+      .catch((error) => console.log(`Promise rejected with error: ${error}`));
+    
 
 
 
@@ -156,6 +152,27 @@ const double = u => u * 2;
 const addOneThenDouble = compose(addOne, double);
 console.log(addOneThenDouble(4));
 
+
+// let input = prompt("Enter an array of numbers, separated by commas: ");
+// let arr = input.split(",").map(Number);
+// console.log(arr)
+
+// function bubblesort(arr) {
+//   let n = arr.length;
+//   for (let i = 0; i < n - 1; i++) {
+//     for (let j = 0; j < n - i - 1; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         let temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//       }
+//     }
+//   }
+// }
+
+
+// bubblesort(arr);
+// console.log(arr);
       
 //  const url='https://jsonplaceholder.typicode.com'
 
