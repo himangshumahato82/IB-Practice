@@ -149,6 +149,13 @@ const addTwo = curriedAdd(2); // returns a new function that takes one argument
 console.log(addTwo(3)); // output: 5
 console.log(addTwo(5)); // output: 7
 
+const compose = (f, g) => x => f(g(x));
+const addOne = y => y + 3;
+const double = u => u * 2;
+// console.log()
+const addOneThenDouble = compose(addOne, double);
+console.log(addOneThenDouble(4));
+
       
 //  const url='https://jsonplaceholder.typicode.com'
 
