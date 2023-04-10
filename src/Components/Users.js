@@ -29,17 +29,17 @@ function Users(props) {
 },[search])
   
 
-   //  const Pre=()=>{
-   //    setPegi((pre)=>pre-1)
-   //    // GetData()
-   //  }
-   // const Next=()=>{
-   //  setPegi((pre)=>pre+1)
-   // //  GetData()
-   // }
-   // closure
-   // const add = (function () {
-   //    let counter = 0;
+    const Pre=()=>{
+      setPegi((pre)=>pre-1)
+      // GetData()
+    }
+   const Next=()=>{
+    setPegi((pre)=>pre+1)
+   //  GetData()
+   }
+   closure
+   const add = (function () {
+      let counter = 0;
       
    //    return function () {counter += 1; return counter}
       
