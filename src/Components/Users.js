@@ -15,10 +15,11 @@ function Users(props) {
    //   })
    // }
 
-   useEffect(()=>{
-    const handlechange=setTimeout(()=>{
-      fetch(`https://jsonplaceholder.typicode.com/comments?q=${search}`)
-      .then((res)=>res.json())
+  useEffect(()=>{
+     const  handlechange= setTimeout(()=>{
+      // fetch(`https://fakestoreapi.com/users?limit=5&q=${search}`)
+       fetch(`https://jsonplaceholder.typicode.com/comments?q=${search}`)
+      .then((res)=> res.json())
       .then((data)=>{
         setState(data)
       })
@@ -48,31 +49,31 @@ function Users(props) {
    //  add();
    //  add();
    
-    const add =(function(){
-      let counter =0;
-      return function(){counter+=1;return counter}
-    })();
+    // const add =(function(){
+    //   let counter =0;
+    //   return function(){counter+=1;return counter}
+    // })();
     
-    add()
-    add()
-    add()
-    console.log(add())
+    // add()
+    // add()
+    // add()
+    // console.log(add())
 
-    const myPromise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const check = false;
-        if (check) {
-          resolve("resolve"); 
-        } else {
-          reject('Rejected'); 
-        }
-      }, 2000);
-    });
-    console.log(myPromise); // Logs "Promise {<pending>}"
+    // const myPromise = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     const check = false;
+    //     if (check) {
+    //       resolve("resolve"); 
+    //     } else {
+    //       reject('Rejected'); 
+    //     }
+    //   }, 2000);
+    // });
+    // console.log(myPromise); // Logs "Promise {<pending>}"
     
-    myPromise
-      .then((result) => console.log(`Promise fulfilled with result: ${result}`))
-      .catch((error) => console.log(`Promise rejected with error: ${error}`));
+    // myPromise
+    //   .then((result) => console.log(`Promise fulfilled with result: ${result}`))
+    //   .catch((error) => console.log(`Promise rejected with error: ${error}`));
     
 
 
@@ -81,39 +82,41 @@ function Users(props) {
 
         // callBack Function
 
-        function myDisplayer(some) {
-         var newsum=30+some;
-         console.log(newsum)
-        }
+// //         function myFunction(x, y, callback) {
+//            var result = x + y;
+//           callback(result);
+// //          console.log(result)
+
+// }
+
+// function myCallbackFunction(sum) {
+//  console.log("The sum is: " + sum);
+// }
+
+// myFunction(2, 3, myCallbackFunction);
         
-        function myCalculator(num1, num2) {
-          var sum = num1 + num2;
-          console.log(sum)
-           return sum;
-        }
+//         myDisplayer(myCalculator(5,20))
+//         // here myDisplayer is a callBack functon
+//         // closuer function
+//         function outerFunction() {
+//           var message = 'Hello';
         
-        myDisplayer(myCalculator(5,20))
-        // here myDisplayer is a callBack functon
-        // closuer function
-        function outerFunction() {
-          var message = 'Hello';
+//           function innerFunction() {
+//             console.log(message);
+//           }
         
-          function innerFunction() {
-            console.log(message);
-          }
+//           return innerFunction;
+//         }
         
-          return innerFunction;
-        }
-        
-        const inner = outerFunction();
-        inner(); // logs 'Hello'
+//         const inner = outerFunction();
+//         inner(); // logs 'Hello'
 
 
-        // currying
-        // A regular function that takes two arguments
-function add(x, y) {
-  return x + y;
-}
+//         // currying
+//         // A regular function that takes two arguments
+// function add(x, y) {
+//   return x + y;
+// }
 
 // const arr = [2, 4, 5, 2, 4, 5, 6, 7, 7];
 // const count = {};
@@ -134,23 +137,23 @@ function add(x, y) {
 // });
 
 // A curried function that takes one argument at a time
-function curriedAdd(x) {
-  return function(y) {
-    return x + y;
-  }
-}
+// function curriedAdd(x) {
+//   return function(y) {
+//     return x + y;
+//   }
+// }
 
-// We can call the curried function like this
-const addTwo = curriedAdd(2); // returns a new function that takes one argument
-console.log(addTwo(3)); // output: 5
-console.log(addTwo(5)); // output: 7
+// // We can call the curried function like this
+// const addTwo = curriedAdd(2); // returns a new function that takes one argument
+// console.log(addTwo(3)); // output: 5
+// console.log(addTwo(5)); // output: 7
 
-const compose = (f, g) => x => f(g(x));
-const addOne = y => y + 3;
-const double = u => u * 2;
-// console.log()
-const addOneThenDouble = compose(addOne, double);
-console.log(addOneThenDouble(4));
+// const compose = (f, g) => x => f(g(x));
+// const addOne = y => y + 3;
+// const double = u => u * 2;
+// // console.log()
+// const addOneThenDouble = compose(addOne, double);
+// console.log(addOneThenDouble(4));
 
 
 // let input = prompt("Enter an array of numbers, separated by commas: ");
