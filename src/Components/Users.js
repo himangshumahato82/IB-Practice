@@ -37,9 +37,9 @@ function Users(props) {
     setPegi((pre)=>pre+1)
    //  GetData()
    }
-   closure
-   const add = (function () {
-      let counter = 0;
+   // closure
+   // const add = (function () {
+   //    let counter = 0;
       
    //    return function () {counter += 1; return counter}
       
@@ -172,6 +172,13 @@ function Users(props) {
 //     }
 //   }
 // }
+ function sum(x){
+   return function(y){
+      return x+y;
+   }
+ }
+ console.log(sum(4)(7))
+
 
 
 // bubblesort(arr);
