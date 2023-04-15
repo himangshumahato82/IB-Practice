@@ -59,17 +59,17 @@ function Users(props) {
     // add()
     // console.log(add())
 
-    const myPromise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const check = false;
-        if (check) {
-          resolve("resolve"); 
-        } else {
-          reject('Rejected'); 
-        }
-      }, 2000);
-    });
-    console.log(myPromise); // Logs "Promise {<pending>}"
+    // const myPromise = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     const check = false;
+    //     if (check) {
+    //       resolve("resolve"); 
+    //     } else {
+    //       reject('Rejected'); 
+    //     }
+    //   }, 2000);
+    // });
+    // console.log(myPromise); // Logs "Promise {<pending>}"
     
     // myPromise
     //   .then((result) => console.log(`Promise fulfilled with result: ${result}`))
