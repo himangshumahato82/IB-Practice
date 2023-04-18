@@ -7,6 +7,7 @@ function Nav(props) {
               <Link to ={"/"}><h1>Login</h1></Link>
               <Link to ={"/timer"}>Timmer</Link>
              <Link to={"/home"}><h1>Home</h1></Link>
+             <Link to={"/useref"}>UseRef</Link>
             <Link to={"/data"}><h1>Data Fetch</h1></Link>
             <Link to={"/users"}> <h1>User Details</h1>      </Link>
         </div>

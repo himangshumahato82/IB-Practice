@@ -29,14 +29,14 @@ function Users(props) {
 },[search])
   
 
-    const Pre=()=>{
-      setPegi((pre)=>pre-1)
-      // GetData()
-    }
-   const Next=()=>{
-    setPegi((pre)=>pre+1)
-   //  GetData()
-   }
+  //   const Pre=()=>{
+  //     setPegi((pre)=>pre-1)
+  //     // GetData()
+  //   }
+  //  const Next=()=>{
+  //   setPegi((pre)=>pre+1)
+  //  //  GetData()
+  //  }
    // closure
    // const add = (function () {
    //    let counter = 0;
@@ -160,24 +160,24 @@ function Users(props) {
 // let arr = input.split(",").map(Number);
 // console.log(arr)
 
-// function bubblesort(arr) {
-//   let n = arr.length;
-//   for (let i = 0; i < n - 1; i++) {
-//     for (let j = 0; j < n - i - 1; j++) {
-//       if (arr[j] > arr[j + 1]) {
-//         let temp = arr[j];
-//         arr[j] = arr[j + 1];
-//         arr[j + 1] = temp;
-//       }
-//     }
-//   }
-// }
-//  function sum(x){
-//    return function(y){
-//       return x+y;
-//    }
-//  }
-//  console.log(sum(4)(7))
+function bubblesort(arr) {
+  let n = arr.length;
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+}
+ function sum(x){
+   return function(y){
+      return x+y;
+   }
+ }
+ console.log(sum(4)(7))
 
 
 

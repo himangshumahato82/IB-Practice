@@ -6,6 +6,7 @@ import Pegi from '../Pegi';
 import Login from '../Login';
 import Users from '../Users';
 import Timer from '../Timer';
+import  MyComponent from "../UseRef"
 function AllRoute(props) {
     return (
         <div>
@@ -13,6 +14,7 @@ function AllRoute(props) {
             <Routes>
             <Route path='/home' element={<PrivateRouting Chil={Home}/>}/>
             <Route path="/data" element={<PrivateRouting Chil={Pegi}/>}/>
+            <Route path="/useref" element={<PrivateRouting Chil={MyComponent}/>}/>
             <Route path="/users" element={<PrivateRouting Chil={Users}/>}/>
             <Route path ="/" element={<Login/>}/>
             <Route path ="/timer" element={<Timer/>}/>
