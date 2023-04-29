@@ -50,17 +50,23 @@ console.log(day)
           
         
         {smart}</h1>
-              <Link to ={"/"}><h1>Login</h1></Link>
+              <Link to ={"/"} style={{textDecoration:"none"}}><h1>Login</h1></Link>
                
-              <Link to ={"/timer"}>Timmer</Link>
-             <Link to={"/home"}><h1>Home</h1></Link>
-             <Link to={"/useref"}>
-             
+              <Link to ={"/timer"} style={{textDecoration:"none"}}>
+               <h1>
+               Timmer
+               </h1>
+              </Link>
+             <Link to={"/home"} style={{textDecoration:"none"}}><h1>Home</h1></Link>
+             <Link to={"/useref"} style={{textDecoration:"none"}}>
+             <h1>
              UseRef
+             </h1>
+            
              
              </Link>
-            <Link to={"/data"}><h1>Data Fetch</h1></Link>
-            <Link to={"/users"}> <h1>User Details</h1> </Link>
+            <Link to={"/data"} style={{textDecoration:"none"}}><h1>Data Fetch</h1></Link>
+            <Link to={"/users"} style={{textDecoration:"none"}}> <h1>User Details</h1> </Link>
         </div>
     );
 }

@@ -8,6 +8,10 @@
  text-align: center;
 
 }
+link{
+  text-decoration: none;
+}
+
 .App1{
   display: flex;
  margin: auto 280px;
