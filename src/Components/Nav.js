@@ -20,26 +20,16 @@ function Nav(props) {
       sec=sec.toString().padStart(2,"0")
      const arr=[hr,":",min,":",sec]
      setSmart(arr)
-    // console.log(arr)
-    //  console.log(smart)
-    // console.log(hr,min,sec)
-    // ;
-    // hour.textContent = hr;
-    //    minute.textContent = min;
-    //    seconds.textContent = sec;
+   
         
     },1000)
-    // const hour = document.getElementById("hour");
-    // const minute = document.getElementById("minute");
-    // const seconds = document.getElementById("seconds");
     
         }
-        // const date1= document.getElementById("date");
+       
 const dateNow = new Date();
 const day = dateNow.toLocaleDateString('en-In', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 console.log(day)
-// const timeString = `${day}`
-// date1.textContent = `${day}`
+
     return (
         <div style={{display:"flex",justifyContent:"space-evenly",height:"100px",backgroundColor:"teal",alignItems:"center"}}>
         
