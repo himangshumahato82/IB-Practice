@@ -8,7 +8,7 @@ function Home(props) {
   let input =e.target.value
    if(input){
     let newarr=arr.filter((el)=>{
-     return el.startsWith(input)
+     return el.includes(input)
     })
     setState(newarr)
    }else{
