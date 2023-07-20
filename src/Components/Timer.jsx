@@ -28,6 +28,8 @@ function Timer(props) {
         <button onClick={Start}>Start</button>
         <button onClick={Stop}>Stop</button>
         <button onClick={Pause}>Pause</button>
+          
+        
       </div>
     );
 }
