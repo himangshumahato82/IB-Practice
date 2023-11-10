@@ -1,6 +1,5 @@
 
-// import './App.css'
-// import Input from './Components/Input';
+
 import React from "react";
 import Nav from "./Components/Nav";
 import { useState } from "react";
