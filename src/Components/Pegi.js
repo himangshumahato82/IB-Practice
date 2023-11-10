@@ -39,7 +39,7 @@ function Pegi(props) {
       .then((data) => {
         setData(data)
       })
-    // console.log("hi");
+   
   };
   const clear = () => {
     setSearch("")
