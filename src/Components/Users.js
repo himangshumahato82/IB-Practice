@@ -5,15 +5,15 @@ function Users(props) {
    const [search, setSearch] = useState(""); 
   const [state,setState]=useState([])
 
-   //const [pegi,setPegi]=useState(1)
-   // const GetData=()=>{
-   //   fetch(`https://jsonplaceholder.typicode.com/comments?_page=${pegi}&_limit=10`)
-   //   .then((res)=>res.json())
-   //   .then((data)=>{
-   //    // console.log(data);
-   //    setState(data)
-   //   })
-   // }
+   const [pegi,setPegi]=useState(1)
+   const GetData=()=>{
+     fetch(`https://jsonplaceholder.typicode.com/comments?_page=${pegi}&_limit=10`)
+     .then((res)=>res.json())
+     .then((data)=>{
+      // console.log(data);
+      setState(data)
+     })
+   }
 
   useEffect(()=>{
      const  handlechange= setTimeout(()=>{
