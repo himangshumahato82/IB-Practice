@@ -15,18 +15,18 @@ function Users(props) {
      })
    }
 
-  useEffect(()=>{
-     const  handlechange= setTimeout(()=>{
-      // fetch(`https://fakestoreapi.com/users?limit=5&q=${search}`)
-       fetch(`https://jsonplaceholder.typicode.com/comments?q=${search}`)
-      .then((res)=> res.json())
-      .then((data)=>{
-        setState(data)
-      })
+//   useEffect(()=>{
+//      const  handlechange= setTimeout(()=>{
+//       // fetch(`https://fakestoreapi.com/users?limit=5&q=${search}`)
+//        fetch(`https://jsonplaceholder.typicode.com/comments?q=${search}`)
+//       .then((res)=> res.json())
+//       .then((data)=>{
+//         setState(data)
+//       })
 
-   },2000)
-   return ()=>clearTimeout(handlechange)
-},[search])
+//    },2000)
+//    return ()=>clearTimeout(handlechange)
+// },[search])
   
 
   //   const Pre=()=>{
