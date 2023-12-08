@@ -6,10 +6,10 @@ import Login from '../Login';
 function PrivateRouting(props) {
     const navigate=useNavigate()
     const {Chil}=props
-    // console.log(Chil)
+    
     console.log(props)
  const {state}=useContext(Mycontext)
-//  console.log(state)
+
    useEffect(() => {
     if(state===false){
         navigate("/")}
